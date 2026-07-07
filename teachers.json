@@ -1,0 +1,284 @@
+
+
+[
+  {
+    "name": "ml Rastogi",
+    "email": "teacher1@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Ajad Shyam Sundar Meena",
+    "email": "teacher2@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "D.S Meena",
+   "email": "teacher3@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Dinesh Kumar",
+    "email": "teacher4@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Ashish Kumar Kesharwani",
+    "email": "teacher5@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Hemant Kumar Singh",
+   "email": "teacher6@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "R. N Savita",
+   "email": "teacher7@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Ravi Pandey",
+    "email": "teacher8@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "R.k Sahu",
+    "email": "teacher9@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Vinod kumar Sharma",
+    "email": "teacher10@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Sachin Kumar",
+    "email": "teacher11@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Kranti Verma",
+    "email": "teacher12@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Imran Khan",
+    "email": "teacher13@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "AS Jaishwal",
+   "email": "teacher14@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "F. P Naquvi",
+   "email": "teacher15@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Ritesh Kumar Maurya",
+   "email": "teacher16@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Reetu Goel",
+   "email": "teacher17@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Pratima Gupta",
+   "email": "teacher18@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Anuruddh kumar",
+    "email": "teacher19@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Jagdeep Tomar",
+    "email": "teacher20@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Mukesh Charndra",
+   "email": "teacher21@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Adhyatm kumar mishra",
+   "email": "teacher22@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Prashant singh Gaur",
+   "email": "teacher23@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Lalita Maurya",
+    "email": "teacher24@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Shailendra Kumar",
+    "email": "teacher25@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Pooja Singh",
+   "email": "teacher26@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Shubham Gupta",
+    "email": "teacher27@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Nitish Kumar",
+    "email": "teacher28@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Krishna Kumar",
+    "email": "teacher29@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Neeraj Kumar",
+    "email": "teacher30@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Rajeev Kumar Singh",
+    "email": "teacher31@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Dharmendra Sharma",
+   "email": "teacher32@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Ambika Devi",
+    "email": "teacher33@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Shalu Gautam",
+    "email": "teacher34@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  },
+  {
+    "name": "Rajeev Kumar",
+    "email": "teacher35@gmail.com",
+    "password": "123456789",
+    "role": "teacher",
+    "isActive": true,
+    "teacherSubject": []
+  }
+]

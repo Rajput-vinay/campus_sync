@@ -1,0 +1,55 @@
+HOSTEL ALLOTMENT LOGIC - STEP BY STEP EXPLANATION
+================================================
+
+This document explains the technical logic implemented for the NSTI Kanpur Hostel Allotment System. The system is designed to be fair, efficient, and compliant with PwD accessibility requirements.
+
+STEP 1: APPLICATION COLLECTION
+------------------------------
+- Students submit their applications including Father's name, Address, Pincode, Trade, CITS Number, and PwD status.
+- Applications are stored in the 'pending' state initially.
+
+STEP 2: PRIORITY CLASSIFICATION (The Core Logic)
+-----------------------------------------------
+When an administrator clicks the "Approve" button, the following logic is executed in the backend:
+
+1. PRIORITY 1: PwD Students (Persons with Disabilities)
+   - These students are given the highest priority.
+   - Requirement: They MUST be allocated a room on the GROUND FLOOR (Floor 0) for accessibility.
+   - The system specifically searches for rooms where `floor: 0` and `isOccupied: false`.
+
+2. PRIORITY 2: Long-Distance Students
+   - For non-PwD students, the system sorts them based on the distance from their home to the institute (if distance data is available).
+   - This ensures students coming from further away are prioritized for remaining rooms.
+
+STEP 3: SEQUENTIAL ROOM ALLOCATION
+----------------------------------
+The system searches for available rooms in a specific order:
+
+1. It filters rooms that are NOT currently occupied (`isOccupied: false`).
+2. It sorts available rooms by Floor (Ground Floor first, then 1st Floor).
+3. Within each floor, it sorts by Room Number (101, 102, 103, etc.) to keep students grouped together.
+
+STEP 4: SMART MATCHING
+----------------------
+- For PwD Students: System only looks at Floor 0. If no room is available on Floor 0, it returns an error to the admin (to prevent putting a PwD student on a higher floor).
+- For Regular Students: System starts looking at Floor 0 (if rooms remain) and then moves to Floor 1 automatically.
+
+STEP 5: UPDATE AND NOTIFICATION
+-------------------------------
+Once a match is found:
+1. Room Status: The room's `isOccupied` field is set to `true`.
+2. Allotment Record: The student's `application` is updated with the `roomNumber`, `floor`, and `block`.
+3. Application Status: Changed from 'pending' to 'approved'.
+4. User Feedback: The student can now see their Floor and Room number on their dashboard.
+
+STEP 6: INVENTORY MANAGEMENT (Admin View)
+-----------------------------------------
+- Admins can filter the room list by Floor (Ground vs 1st).
+- Rooms are always shown in series (sequential order) so admins can see gaps in occupancy easily.
+- Sorting is strictly: Floor Number (Low to High) -> Room Number (Low to High).
+
+================================================
+Logic implemented by: Antigravity AI
+Project: NSTI Kanpur Portal 
+Date: 2026-05-06
+================================================

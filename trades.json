@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Computer Software Applications",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 50,
+    "subjects": []
+  },
+   {
+    "name": "Computer Hardware and Networking Maintenance",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 25,
+    "subjects": []
+  },
+   {
+    "name": "Artificial Intelligence",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 25,
+    "subjects": []
+  },
+   {
+    "name": "Fitter",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 100,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Electrician",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 100,
+    "subjects": []
+  },
+
+
+   {
+    "name": "EM",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 50,
+    "subjects": []
+  },
+
+
+   {
+    "name": "MMV",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 50,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Turner",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 75,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Welder",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 75,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Machinist",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 50,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Sewing Technology",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 100,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Dress Making",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 50,
+    "subjects": []
+  },
+
+
+   {
+    "name": "Catring & hospitality",
+    "academicYear": "69f4cb067ec614b77534095e", 
+    "capacity": 25,
+    "subjects": []
+  }
+]

@@ -1,0 +1,359 @@
+[
+  {
+    "name": "Abhishek Rajput",
+    "email": "abhishek.yot222@gmail.com",
+    "password": "123456789",
+    
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Ajay sharma",
+    "email": "ajaysharma11marc2004@gmail.com",
+    "password": "123456789",
+   
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "ANKIT RATHORE",
+    "email": "ankitrathore172000@gmail.com",
+    "password": "123456789",
+    
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Anshuman Nishad",
+    "email": "nishadanshuman32@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Anurag vishwakarma",
+    "email": "anuragvishwakrma@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Archi Tripathi",
+    "email": "architripathi009@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Arya Sengar",
+    "email": "sengararya089@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Ashutosh Choudhari",
+    "email": "ashuch2407@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Bablu Kumar",
+    "email": "erbadnaam@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Deepak kumar",
+    "email": "deepak02520@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Desh Ratn Prajapati",
+    "email": "desh.prajapati.100@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Gopal ji",
+    "email": "gopalji.715161@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Harshita",
+    "email": "varshneyharshita09@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Himanshu Panchal",
+    "email": "himanshupanchal283@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Jyoti shah",
+    "email": "jyotishah5581@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Kuldeep Singh Gaur",
+    "email": "kuldeepthakur2600@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Manisha kumari",
+    "email": "samikshasingh9090@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Monika Maurya",
+    "email": "mauryareetu93@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "MONIKA VISHWAKARMA",
+    "email": "monikavishwakarma627@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Neha",
+    "email": "nehasahu0194@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Nitin Kumar Balmiki",
+    "email": "nitinmm1419@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Prabhash Kumar",
+    "email": "pk786.1993@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Prachi Bajpai",
+    "email": "prachibajpainhrpi@gmail.com",
+
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Pradeep kumar",
+    "email": "rg7025479@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Raj kumar sah",
+    "email": "kumarraj18011@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Rashmi Shukla",
+    "email": "shuklarashmi475@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Sandhya sharma",
+    "email": "sandhyasharma8896@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Shraddha Mishra",
+    "email": "shraddhamishra8445@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Shreya Gupta",
+    "email": "kratigupta4283@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Sintu Marandi",
+    "email": "sintumarandi74@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Sonal Kumari",
+    "email": "sonalverma5184@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Soniya bansal",
+    "email": "bansalsoniya71@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Srashti sahu",
+    "email": "tanusahusmile222@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "sunil kumar",
+    "email": "sunilnetam43@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Tanishk Verma",
+    "email": "tanishkverma1404@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Tarun Gautam",
+    "email": "gautam.tarun.76@gmail.comm",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Vandana Singh",
+    "email": "vandanashankarganj1997@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Vikas",
+    "email": "vvikas5921@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Vinay Rajput",
+    "email": "adm21002785@rmlau.ac.in",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Vishal Dixit",
+    "email": "dixitvishal366@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+
+  {
+    "name": "Ekta Sahu",
+    "email": "ektasahu14072001@gmail.com",
+   
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  },
+  {
+    "name": "Sakshi Prajapati",
+    "email": "prajapatisakshi079@gmail.com",
+    
+    "password": "123456789",
+    "role": "student",
+    "isActive": true
+  }
+]

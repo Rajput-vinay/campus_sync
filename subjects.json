@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Trade Theory",
+    "code": "TT",
+    "isActive": true
+  },
+  {
+    "name": "Trade Practical",
+    "code": "TP",
+    "isActive": true
+  },
+  {
+    "name": "Workshop Calculation & Science",
+    "code": "WCS",
+    "isActive": true
+  },
+  {
+    "name": "Engineering Drawing",
+    "code": "ED",
+    "isActive": true
+  },
+  {
+    "name": "Employability Skills",
+    "code": "ES",
+    "isActive": true
+  },
+  {
+    "name": "Soft Skills",
+    "code": "SS",
+    "isActive": true
+  },
+  {
+    "name": "Training Methodology",
+    "code": "TM",
+    "isActive": true
+  }
+]
