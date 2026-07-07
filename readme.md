@@ -150,6 +150,16 @@ Traditional manual processes often lead to:
 
 ---
 
+### Login Creditial
+
+**Student Portal**
+  - email student@gmail.com
+  - password 12345678
+
+**Admin Portal**
+ - email nsti_kanpur@gmail.com
+ - password 123456789
+
 ## 📜 License
 
 Designed and Developed for **NSTI Kanpur**. Under the Ministry of Skill Development & Entrepreneurship by rajput-vinay.
