@@ -54,12 +54,16 @@ if (process.env.STAGE === "development") {
 
 // cross-origin resource sharing (CORS) middleware
 // credentials: true allows cookies to be sent with requests
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_URL,
+//     credentials: true,
+//   })
+// );
+
+app.use(cors({
+  origin: "*"
+}));
 
 // health check route
 app.get("/", (req: Request, res: Response) => {
