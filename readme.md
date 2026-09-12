@@ -160,6 +160,64 @@ Traditional manual processes often lead to:
  - email nsti_kanpur@gmail.com
  - password 123456789
 
+
+## 📷 First View Through Image
+
+### HomePage
+
+<img src="./frontend/src/assets/homePage.png" alt="HomePage" width="800"/>
+
+### SignIn/SignUp
+
+<img src="./frontend/src/assets/loginPage.png" alt="HomePage" width="800"/>
+
+### Student Dashboard
+
+<img src="./frontend/src/assets/StudentDashboard.png" alt="HomePage" width="800"/>
+
+### Trade
+
+<img src="./frontend/src/assets/Trade.png" alt="HomePage" width="800"/>
+
+### Password Change
+<img src="./frontend/src/assets/PasswordChange.png" alt="HomePage" width="800"/>
+
+### TimeTable
+<img src="./frontend/src/assets/TimeTable.png" alt="HomePage" width="800"/>
+
+### Exam
+
+<img src="./frontend/src/assets/Exam.png" alt="HomePage" width="800"/>
+
+
+
+### Hostel Application Status
+
+<img src="./frontend/src/assets/HostelApplicationStatus.png" alt="HomePage" width="800"/>
+
+
+
+
+
+
+
+
+### Admin Dashboard
+
+<img src="./frontend/src/assets/CentralAdminstrate.png" alt="HomePage" width="800"/>
+
+### Institute Add
+<img src="./frontend/src/assets/AddTheInstitute.png" alt="HomePage" width="800"/>
+
+### Attendance
+
+<img src="./frontend/src/assets/Attendance.png" alt="HomePage" width="800"/>
+
+### Hostel Request
+<img src="./frontend/src/assets/Hostel.png" alt="HomePage" width="800"/>
+
+
+
 ## 📜 License
 
 Designed and Developed for **NSTI Kanpur**. Under the Ministry of Skill Development & Entrepreneurship by rajput-vinay.
