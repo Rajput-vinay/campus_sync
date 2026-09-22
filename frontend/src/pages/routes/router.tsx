@@ -28,13 +28,13 @@ export const router = createBrowserRouter([
       {
         element: <PrivateRoutes />, // Assuming PrivateRoutes is imported
         children: [
-          { path: "/dashboard", element: <Dashboard /> },
-          { path: "/activies-log", element: <Activities /> },
-          { path: "/settings/academic-years", element: <AcademicYear /> },
-          { path: "/settings/change-password", element: <ChangePassword /> },
-          { path: "/settings/institutes", element: <InstitutesPage /> },
+          { path: "dashboard", element: <Dashboard /> },
+          { path: "activies-log", element: <Activities /> },
+          { path: "settings/academic-years", element: <AcademicYear /> },
+          { path: "settings/change-password", element: <ChangePassword /> },
+          { path: "settings/institutes", element: <InstitutesPage /> },
           {
-            path: "/users/students",
+            path: "users/students",
             element: (
               <UserManagementPage
                 role="student"
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             ),
           },
           {
-            path: "/users/teachers",
+            path: "users/teachers",
             element: (
               <UserManagementPage
                 role="teacher"
@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
             ),
           },
           {
-            path: "/users/parents",
+            path: "users/parents",
             element: (
               <UserManagementPage
                 role="parent"
@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
             ),
           },
           {
-            path: "/users/admins",
+            path: "users/admins",
             element: (
               <UserManagementPage
                 role="admin"
@@ -74,39 +74,39 @@ export const router = createBrowserRouter([
             ),
           },
           {
-            path: "/trades",
+            path: "trades",
             element: <Trades />,
           },
           {
-            path: "/subjects",
+            path: "subjects",
             element: <Subjects />,
           },
           {
-            path: "/timetable",
+            path: "timetable",
             element: <Timetable />,
           },
           {
-            path: "/attendance",
+            path: "attendance",
             element: <Attendance />,
           },
           {
-            path: "/lms/exams",
+            path: "lms/exams",
             element: <Exams />,
           },
           {
-            path: "/lms/exams/:id",
+            path: "lms/exams/:id",
             element: <Exam />,
           },
           {
-            path: "/lms/results",
+            path: "lms/results",
             element: <ExamResultsPage />,
           },
           {
-            path: "/hostel/apply",
+            path: "hostel/apply",
             element: <HostelApply />,
           },
           {
-            path: "/hostel/list",
+            path: "hostel/list",
             element: <HostelAdmin />,
           },
         ],
