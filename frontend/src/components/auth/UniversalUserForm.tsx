@@ -65,7 +65,7 @@ type FormValues = z.infer<ReturnType<typeof createSchema>>;
 const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
   const isUpdate = type === "update";
   const isLogin = type === "login";
-  const { user } = useAuth();
+  const { user, setUser } = useAuth();
   const navigate = useNavigate();
 
   const [trades, setTrades] = useState<Trade[]>([]);
@@ -178,13 +178,17 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
       };
 
       if (isLogin) {
-        await api.post("/users/login", {
+        const { data: loggedInUser } = await api.post("/users/login", {
           email: data.email,
           password: data.password,
         });
 
+        // Login succeeds on the server, but AuthProvider still has the
+        // initial null user. Update it before navigating to the protected route.
+        setUser(loggedInUser);
+
         toast.success("Logged in successfully");
-        navigate("/dashboard");
+        navigate("/dashboard", { replace: true });
       } else if (type === "create") {
         await api.post("/users/register", payload);
         toast.success("Account created successfully!");
