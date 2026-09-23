@@ -7,12 +7,13 @@ export const generateToken = (userId: string, res: Response) => {
     algorithm: "HS512",
   });
 
-  // attach token to http-only cookie
+  // Frontend (Vercel) and backend (Render) are different sites,
+  // so production auth cookies must allow cross-site requests.
   res.cookie("jwt", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
-    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-    path: "/", // cookie valid for entire site
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    path: "/",
   });
 };
