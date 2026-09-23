@@ -19,6 +19,7 @@ import { CustomSelect } from "@/components/global/CustomSelect";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/hooks/AuthProvider";
 import { CustomMultiSelect } from "@/components/global/CustomMultiSelect";
+import { useNavigate } from "react-router";
 
 export type FormType = "login" | "create" | "update";
 interface Props {
@@ -65,6 +66,7 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
   const isUpdate = type === "update";
   const isLogin = type === "login";
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const [trades, setTrades] = useState<Trade[]>([]);
   const [loading, setLoading] = useState(true);
@@ -86,7 +88,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
     },
   });
 
-  // fetch trades
   useEffect(() => {
     const fetchTrades = async () => {
       try {
@@ -107,7 +108,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
     fetchTrades();
   }, []);
 
-  // Fetch institutes for super_admin
   useEffect(() => {
     if (user?.role === "super_admin" && !isLogin) {
       const fetchInstitutes = async () => {
@@ -125,7 +125,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
     }
   }, [user, isLogin]);
 
-  // Fetch subjects
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
@@ -147,7 +146,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
     fetchSubjects();
   }, []);
 
-  // Populate form for Update mode
   useEffect(() => {
     if (initialData && isUpdate) {
       const existingTradeId =
@@ -159,7 +157,10 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
         name: initialData.name || "",
         email: initialData.email || "",
         role: initialData.role || "student",
-        instituteId: typeof initialData.institute === "object" ? (initialData.institute as any)?._id : initialData.institute || "",
+        instituteId:
+          typeof initialData.institute === "object"
+            ? (initialData.institute as any)?._id
+            : initialData.institute || "",
         password: "",
         tradeId: existingTradeId || "",
         subjectIds: initialData.teacherSubject?.map((s) => s._id) || [],
@@ -169,23 +170,21 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
 
   async function onSubmit(data: FormValues) {
     try {
-      // console.log(data);
       const payload = {
         studentTrade: data.tradeId ? data.tradeId : undefined,
         teacherSubject: data.subjectIds ? data.subjectIds : [],
         institute: data.instituteId ? data.instituteId : undefined,
-        // role: role,
         ...data,
       };
+
       if (isLogin) {
-        const { data: user } = await api.post("/users/login", {
+        await api.post("/users/login", {
           email: data.email,
           password: data.password,
         });
-        //   todo: set user context
-        console.log(user);
+
         toast.success("Logged in successfully");
-        window.location.href = "/dashboard";
+        navigate("/dashboard");
       } else if (type === "create") {
         await api.post("/users/register", payload);
         toast.success("Account created successfully!");
@@ -197,7 +196,8 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
       }
     } catch (error: any) {
       console.log(error);
-      const msg = error?.response?.data?.message || "An error occurred. Please try again.";
+      const msg =
+        error?.response?.data?.message || "An error occurred. Please try again.";
       toast.error(msg);
     }
   }
@@ -215,7 +215,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
 
   const pending = form.formState.isSubmitting;
   const showRoleSelector = !isLogin;
-  // you can also include teacher is needed
   const showTradeSelector = !isLogin && role === "student";
   const showSubjectSelector = !isLogin && role === "teacher";
   const showInstituteSelector = !isLogin && user?.role === "super_admin";
@@ -237,7 +236,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
               disabled={pending}
             />
           )}
-          {/* role selector */}
           {showRoleSelector && (
             <CustomSelect
               control={form.control}
@@ -249,7 +247,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
             />
           )}
           <div className="col-span-2 space-y-2">
-            {/* institute */}
             {showInstituteSelector && (
               <CustomSelect
                 control={form.control}
@@ -261,7 +258,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
                 loading={loadingInstitutes}
               />
             )}
-            {/* trade */}
             {showTradeSelector && (
               <CustomSelect
                 control={form.control}
@@ -273,7 +269,6 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
                 loading={loading}
               />
             )}
-            {/* subjects(multiple select is need here) */}
             {showSubjectSelector && (
               <CustomMultiSelect
                 control={form.control}
@@ -311,7 +306,7 @@ const UniversalUserForm = ({ type, initialData, onSuccess, role }: Props) => {
                 name="confirmPassword"
                 label="Confirm Password"
                 type="password"
-                placeholder={"Confirm Password"}
+                placeholder="Confirm Password"
                 disabled={pending}
               />
             </div>
