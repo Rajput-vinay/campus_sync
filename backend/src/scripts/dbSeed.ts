@@ -18,7 +18,6 @@ export const seedAndMigrateDatabase = async () => {
   try {
     console.log("🔄 Starting database initialization & multi-tenant migration...");
 
-    // 1. Ensure at least one default Institute exists
     let defaultInstitute = await Institute.findOne({ code: "NSTI-KANPUR" });
 
     if (!defaultInstitute) {
@@ -39,7 +38,6 @@ export const seedAndMigrateDatabase = async () => {
 
     const defaultInstId = defaultInstitute._id;
 
-    // 2. Perform Migration: Update any existing records missing the 'institute' field
     const modelsToMigrate = [
       { name: "Trade", model: Trade, query: { institute: { $exists: false } } },
       { name: "Subject", model: Subject, query: { institute: { $exists: false } } },
@@ -64,7 +62,6 @@ export const seedAndMigrateDatabase = async () => {
       }
     }
 
-    // Special migration for User: only users who are NOT super_admin need an institute
     const userCount = await User.countDocuments({
       role: { $ne: UserRole.SUPER_ADMIN },
       institute: { $exists: false }
@@ -78,14 +75,12 @@ export const seedAndMigrateDatabase = async () => {
       console.log(`✅ Successfully migrated User records.`);
     }
 
-    // 2.1 Migrate HostelBuilding missing institute reference
     const hostelCount = await HostelBuilding.countDocuments({ institute: { $exists: false } });
     if (hostelCount > 0) {
       await HostelBuilding.updateMany({ institute: { $exists: false } }, { $set: { institute: defaultInstId } });
       console.log(`✅ Migrated ${hostelCount} Hostel records to default institute.`);
     }
 
-    // 2.2 Ensure default hostels exist for the default institute
     let defaultBoysHostel = await HostelBuilding.findOne({ name: "Boys Hostel A", institute: defaultInstId });
     if (!defaultBoysHostel) {
       defaultBoysHostel = await HostelBuilding.create({
@@ -93,30 +88,56 @@ export const seedAndMigrateDatabase = async () => {
         category: "Boys Hostel",
         institute: defaultInstId,
       });
-      console.log(`✅ Default Boys Hostel created.`);
+      console.log("✅ Default Boys Hostel created.");
     }
 
-    // 2.3 Migrate rooms missing a hostel reference to the default boys hostel
     const roomsMissingHostel = await Room.countDocuments({ hostel: { $exists: false } });
     if (roomsMissingHostel > 0) {
       await Room.updateMany({ hostel: { $exists: false } }, { $set: { hostel: defaultBoysHostel._id } });
       console.log(`✅ Migrated ${roomsMissingHostel} Room records to default Boys Hostel.`);
     }
 
-    // 3. Ensure a default Super Admin user exists for centralized management
     let superAdmin = await User.findOne({ role: UserRole.SUPER_ADMIN });
 
     if (!superAdmin) {
       superAdmin = await User.create({
         name: "Central Super Administrator",
         email: "superadmin@nsti.gov.in",
-        password: "superadmin123", // Pre-save hooks in user.ts will hash this
+        password: "superadmin123",
         role: UserRole.SUPER_ADMIN,
         isActive: true,
       });
       console.log(`👑 Created default Central Super Admin: ${superAdmin.email}`);
     } else {
-      console.log(`👑 Central Super Admin is already present.`);
+      console.log("👑 Central Super Admin is already present.");
+    }
+
+    // Public demo accounts. The User model hashes passwords automatically.
+    const demoAccounts = [
+      {
+        name: "Demo Student",
+        email: "demo.student@nsti.gov.in",
+        password: "Demo@123456",
+        role: UserRole.STUDENT,
+        institute: defaultInstId,
+        isActive: true,
+      },
+      {
+        name: "Demo Admin",
+        email: "demo.admin@nsti.gov.in",
+        password: "Demo@123456",
+        role: UserRole.ADMIN,
+        institute: defaultInstId,
+        isActive: true,
+      },
+    ];
+
+    for (const demo of demoAccounts) {
+      const existingDemo = await User.findOne({ email: demo.email });
+      if (!existingDemo) {
+        await User.create(demo);
+        console.log(`🧪 Created demo account: ${demo.email}`);
+      }
     }
 
     console.log("🎉 Database initialization & migration completed successfully!");
