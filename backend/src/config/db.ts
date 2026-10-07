@@ -1,12 +1,31 @@
 import mongoose from "mongoose";
 
-// connect our db
 export const connectDB = async () => {
+  const mongoUrl = process.env.MONGO_URL;
+
+  if (!mongoUrl) {
+    throw new Error("MONGO_URL is not configured in the environment.");
+  }
+
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URL as string);
+    const conn = await mongoose.connect(mongoUrl, {
+      serverSelectionTimeoutMS: 15000,
+      connectTimeoutMS: 15000,
+      family: 4,
+    });
+
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`❌ Error: ${(error as Error).message}`);
-    process.exit(1); // Exit process with failure
+    const err = error as Error & {
+      code?: string;
+      reason?: unknown;
+    };
+
+    console.error("❌ MongoDB connection failed");
+    console.error("Error:", err.message);
+    console.error("Code:", err.code ?? "N/A");
+    console.error("Name:", err.name ?? "N/A");
+
+    process.exit(1);
   }
 };
