@@ -56,7 +56,9 @@ const Attendance = () => {
     fetchRecords();
   }, [filters]);
 
-  const displayRecords = filters.monthNumber === "all"
+  const displayRecords = isStudent
+    ? records
+    : filters.monthNumber === "all"
     ? (() => {
         const aggregated = records.reduce((acc: any[], current: any) => {
           const studentId = current.student?._id;
