@@ -31,8 +31,6 @@ import attendanceRouter from "./routes/attendance.ts";
 import dashboardRouter from "./routes/dashboard.ts";
 import hostelRouter from "./routes/hostel.ts";
 import instituteRouter from "./routes/institute.ts";
-import dns from "node:dns";
-dns.setServers(["1.1.1.1", "1.0.0.1"])
 // Load environment variables from .env file
 dotenv.config();
 
